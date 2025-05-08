@@ -1,0 +1,21 @@
+myo_left:
+  device_address: "D3BF8526-BDCC-9456-BDBB-3B996B160C75"  # Replace with Left Myo MAC/UUID
+myo_left_address: "D3BF8526-BDCC-9456-BDBB-3B996B160C75"
+myo_right_address: "06FBD787-4456-6AA7-BB1E-425DE1C1D127"
+characteristics:
+  battery_level: 00002a19-0000-1000-8000-00805f9b34fb
+  classifier_event: d5060103-a904-deb9-4748-2c7f4a124842
+  imu_data: d5060102-a904-deb9-4748-2c7f4a124842
+  command: d5060401-a904-deb9-4748-2c7f4a124842    
+  device_info: d5060101-a904-deb9-4748-2c7f4a124842
+  emg0: d5060105-a904-deb9-4748-2c7f4a124842
+  emg1: d5060205-a904-deb9-4748-2c7f4a124842
+  emg2: d5060305-a904-deb9-4748-2c7f4a124842
+  emg3: d5060405-a904-deb9-4748-2c7f4a124842
+  filtered_50hz_emg: d5060104-a904-deb9-4748-2c7f4a124842    
+  manufacturer: 00002a29-0000-1000-8000-00805f9b34fb
+  revision: d5060201-a904-deb9-4748-2c7f4a124842
+
+myo_right:
+  device_address: "06FBD787-4456-6AA7-BB1E-425DE1C1D127" # Replace with Right Myo MAC/UUID
+  

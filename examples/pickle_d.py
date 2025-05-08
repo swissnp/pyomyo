@@ -2,10 +2,10 @@ import pickle
 import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib.collections import LineCollection
-from data_collector_w_imu_visual import quat_to_ypr
+from data_collector_w_imu_visual_native import quat_to_ypr
 
-emg_file = "examples/data/subj_0_fist_43_emg_rec_l.p"
-imu_file = "examples/data/subj_0_fist_43_imu_rec_l.p"
+emg_file = "examples/data/subj_0_fist_96_emg_rec_l.p"
+imu_file = "examples/data/subj_0_fist_96_imu_rec_l.p"
 
 pad = pickle.load(open(emg_file, "rb"))
 imu = pickle.load(open(imu_file, "rb"))
@@ -55,7 +55,8 @@ for i in subplot_list_emg:
 new_ypr = []
 imu_ticks = []
 for i in imu:
-    [w, nx, ny, nz] = [x / 16384 for x in i[0][0]]
+    [w, nx, ny, nz] = [x for x in i[0][0]]
+    print(w, nx, ny, nz)
     [yaw, pitch, roll] = quat_to_ypr([w, nx, ny, nz])
     new_ypr.append([yaw, pitch, roll])
     imu_ticks.append(i[-1])
